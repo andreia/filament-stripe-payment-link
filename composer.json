@@ -1,0 +1,80 @@
+{
+    "name": "andreia/filament-stripe-payment-link",
+    "description": "Filament action to generate a Stripe payment link",
+    "keywords": [
+        "Stripe",
+        "payment link",
+        "laravel",
+        "Filament",
+        "filament-stripe-payment-link"
+    ],
+    "homepage": "https://github.com/andreia/filament-stripe-payment-link",
+    "support": {
+        "issues": "https://github.com/andreia/filament-stripe-payment-link/issues",
+        "source": "https://github.com/andreia/filament-stripe-payment-link"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreia Bohner",
+            "email": "andreiabohner@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "filament/filament": "^3.0",
+        "spatie/laravel-package-tools": "^1.15.0",
+        "stripe/stripe-php": "^9.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.0",
+        "nunomaduro/collision": "^8.1.1||^7.10.0",
+        "nunomaduro/larastan": "^2.0.1",
+        "orchestra/testbench": "^9.0.0||^8.22.0",
+        "pestphp/pest": "^2.1",
+        "pestphp/pest-plugin-arch": "^2.0",
+        "pestphp/pest-plugin-laravel": "^2.0",
+        "pestphp/pest-plugin-livewire": "^2.1",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "spatie/laravel-ray": "^1.26"
+    },
+    "autoload": {
+        "psr-4": {
+            "Andreia\\FilamentStripePaymentLink\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Andreia\\FilamentStripePaymentLink\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Andreia\\FilamentStripePaymentLink\\FilamentStripePaymentLinkServiceProvider"
+            ],
+            "aliases": {
+                "FilamentStripePaymentLink": "Andreia\\FilamentStripePaymentLink\\Facades\\FilamentStripePaymentLink"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
