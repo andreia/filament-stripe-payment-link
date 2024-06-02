@@ -61,7 +61,7 @@ class GenerateStripeLinkAction extends Action
         });
     }
 
-    protected function createStripePaymentLink(array $data):  ?string
+    protected function createStripePaymentLink(array $data): ?string
     {
         try {
             $stripePaymentLinkKeyLocation = config('filament-stripe-payment-link.payment-link-key-location');
@@ -81,13 +81,13 @@ class GenerateStripeLinkAction extends Action
 
             return $paymentLink->url ?? null;
         } catch (Exception $e) {
-            app('log')->error('Exception when creating payment link: '.$e->getMessage());
+            app('log')->error('Exception when creating payment link: ' . $e->getMessage());
 
             return null;
         }
     }
 
-    protected function createStripeProduct(array $data):  ?string
+    protected function createStripeProduct(array $data): ?string
     {
         $product = $this->stripeClient->products->create([
             'name' => $data['product_name'],
