@@ -2,6 +2,7 @@
 
 namespace Andreia\FilamentStripePaymentLink\Tests;
 
+use Andreia\FilamentStripePaymentLink\FilamentStripePaymentLinkServiceProvider;
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Filament\Actions\ActionsServiceProvider;
@@ -15,7 +16,6 @@ use Filament\Widgets\WidgetsServiceProvider;
 use Livewire\LivewireServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 use RyanChandler\BladeCaptureDirective\BladeCaptureDirectiveServiceProvider;
-use Andreia\FilamentStripePaymentLink\FilamentStripePaymentLinkServiceProvider;
 
 class TestCase extends Orchestra
 {
