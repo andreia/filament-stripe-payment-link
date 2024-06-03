@@ -69,10 +69,7 @@
         "laravel": {
             "providers": [
                 "Andreia\\FilamentStripePaymentLink\\FilamentStripePaymentLinkServiceProvider"
-            ],
-            "aliases": {
-                "FilamentStripePaymentLink": "Andreia\\FilamentStripePaymentLink\\Facades\\FilamentStripePaymentLink"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
